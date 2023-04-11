@@ -4,16 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd221c4e-0be1-4c18-aeee-e4e7ef8d48ae" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/images.xml" afterDir="false" />
+    <list default="true" id="dd221c4e-0be1-4c18-aeee-e4e7ef8d48ae" name="Changes" comment="Criando Primeiro GAME em JAVA">
       <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PrimeiroGame.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/Container/Tela.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/Model/Fase.java" afterDir="false" />
@@ -46,6 +39,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "E:/projetos/PrimeiroGame/images",
     "node.js.detected.package.eslint": "true",
@@ -87,11 +81,34 @@
       <option name="presentableId" value="Default" />
       <updated>1681164285213</updated>
       <workItem from="1681164286240" duration="9378000" />
-      <workItem from="1681212475278" duration="1989000" />
+      <workItem from="1681212475278" duration="2591000" />
     </task>
+    <task id="LOCAL-00001" summary="Criando Primeiro GAME em JAVA">
+      <created>1681215005254</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1681215005254</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Criando Primeiro GAME em JAVA" />
+    <option name="LAST_COMMIT_MESSAGE" value="Criando Primeiro GAME em JAVA" />
   </component>
 </project>
