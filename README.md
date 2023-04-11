@@ -1,4 +1,4 @@
-<h1> ## EM CONTRUÇÂO ## </h1>
+<h1> ## EM CONSTRUÇÂO ## </h1>
 <h1>Instalação e Execução</h1>
 
 <ol>
