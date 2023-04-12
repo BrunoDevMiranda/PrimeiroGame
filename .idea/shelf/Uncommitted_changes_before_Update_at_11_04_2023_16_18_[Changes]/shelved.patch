@@ -1,0 +1,184 @@
+Index: .idea/sonarlint/securityhotspotstore/index.pb
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/sonarlint/securityhotspotstore/index.pb b/.idea/sonarlint/securityhotspotstore/index.pb
+--- a/.idea/sonarlint/securityhotspotstore/index.pb	(revision 0ab367d5f978c4fcc5c5ee721bcc6de04ed2e8d1)
++++ b/.idea/sonarlint/securityhotspotstore/index.pb	(date 1681240715731)
+@@ -1,0 +1,12 @@
++
++]
++-.idea/sonarlint/securityhotspotstore/index.pb,8\8\88a9255124c95bdc913197c120a8d560edc59c8e
++S
++#.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
++:
++
++.gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
++@
++PrimeiroGame.iml,7\d\7da7a5ff4989e6b935265fb270ba73d2b502c610
++J
++.idea/libraries/images.xml,8\d\8d1be82de4d1f730825f4795780d9b340ebf5264
+\ No newline at end of file
+Index: src/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Main.java b/src/Main.java
+new file mode 100644
+--- /dev/null	(date 1681164284317)
++++ b/src/Main.java	(date 1681164284317)
+@@ -0,0 +1,5 @@
++public class Main {
++    public static void main(String[] args) {
++        System.out.println("Hello world!");
++    }
++}
+\ No newline at end of file
+Index: .idea/sonarlint/issuestore/index.pb
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/sonarlint/issuestore/index.pb b/.idea/sonarlint/issuestore/index.pb
+--- a/.idea/sonarlint/issuestore/index.pb	(revision 0ab367d5f978c4fcc5c5ee721bcc6de04ed2e8d1)
++++ b/.idea/sonarlint/issuestore/index.pb	(date 1681240715731)
+@@ -1,0 +1,12 @@
++
++]
++-.idea/sonarlint/securityhotspotstore/index.pb,8\8\88a9255124c95bdc913197c120a8d560edc59c8e
++S
++#.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
++:
++
++.gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
++@
++PrimeiroGame.iml,7\d\7da7a5ff4989e6b935265fb270ba73d2b502c610
++J
++.idea/libraries/images.xml,8\d\8d1be82de4d1f730825f4795780d9b340ebf5264
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"dd221c4e-0be1-4c18-aeee-e4e7ef8d48ae\" name=\"Changes\" comment=\"Criando Primeiro GAME em JAVA\">\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/misc.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/modules.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Container/Tela.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Main.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Model/Fase.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Model/Player.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Model/Shoot.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2OFlbhZhRyoEafNGPiceMNmHhct\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\r\n    \"SONARLINT_PRECOMMIT_ANALYSIS\": \"true\",\r\n    \"WebServerToolWindowFactoryState\": \"false\",\r\n    \"last_opened_file_path\": \"E:/projetos/PrimeiroGame/images\",\r\n    \"node.js.detected.package.eslint\": \"true\",\r\n    \"node.js.detected.package.tslint\": \"true\",\r\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\r\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\r\n    \"project.structure.last.edited\": \"Libraries\",\r\n    \"project.structure.proportion\": \"0.0\",\r\n    \"project.structure.side.proportion\": \"0.21034482\",\r\n    \"vue.rearranger.settings.migration\": \"true\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RunManager\">\r\n    <configuration name=\"Tela\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"Container.Tela\" />\r\n      <module name=\"PrimeiroGame\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"Container.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Application.Tela\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"dd221c4e-0be1-4c18-aeee-e4e7ef8d48ae\" name=\"Changes\" comment=\"\" />\r\n      <created>1681164285213</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1681164285213</updated>\r\n      <workItem from=\"1681164286240\" duration=\"9378000\" />\r\n      <workItem from=\"1681212475278\" duration=\"2591000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Criando Primeiro GAME em JAVA\">\r\n      <created>1681215005254</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1681215005254</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"2\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Criando Primeiro GAME em JAVA\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Criando Primeiro GAME em JAVA\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 0ab367d5f978c4fcc5c5ee721bcc6de04ed2e8d1)
++++ b/.idea/workspace.xml	(date 1681240510870)
+@@ -4,14 +4,12 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="dd221c4e-0be1-4c18-aeee-e4e7ef8d48ae" name="Changes" comment="Criando Primeiro GAME em JAVA">
+-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Container/Tela.java" afterDir="false" />
++    <list default="true" id="dd221c4e-0be1-4c18-aeee-e4e7ef8d48ae" name="Changes" comment="imagens">
+       <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Model/Fase.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Model/Player.java" afterDir="false" />
+       <change afterPath="$PROJECT_DIR$/src/Model/Shoot.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -34,24 +32,24 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "RunOnceActivity.OpenProjectViewOnStart": "true",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+-    "WebServerToolWindowFactoryState": "false",
+-    "last_opened_file_path": "E:/projetos/PrimeiroGame/images",
+-    "node.js.detected.package.eslint": "true",
+-    "node.js.detected.package.tslint": "true",
+-    "node.js.selected.package.eslint": "(autodetect)",
+-    "node.js.selected.package.tslint": "(autodetect)",
+-    "project.structure.last.edited": "Libraries",
+-    "project.structure.proportion": "0.0",
+-    "project.structure.side.proportion": "0.21034482",
+-    "vue.rearranger.settings.migration": "true"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
++    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
++    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
++    &quot;last_opened_file_path&quot;: &quot;E:/projetos/PrimeiroGame/images&quot;,
++    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
++    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
++    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
++    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
++    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
++    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
++    &quot;project.structure.side.proportion&quot;: &quot;0.21034482&quot;,
++    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="RunManager">
+     <configuration name="Tela" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+       <option name="MAIN_CLASS_NAME" value="Container.Tela" />
+@@ -81,7 +79,8 @@
+       <option name="presentableId" value="Default" />
+       <updated>1681164285213</updated>
+       <workItem from="1681164286240" duration="9378000" />
+-      <workItem from="1681212475278" duration="2591000" />
++      <workItem from="1681212475278" duration="5230000" />
++      <workItem from="1681240368265" duration="143000" />
+     </task>
+     <task id="LOCAL-00001" summary="Criando Primeiro GAME em JAVA">
+       <created>1681215005254</created>
+@@ -90,7 +89,28 @@
+       <option name="project" value="LOCAL" />
+       <updated>1681215005254</updated>
+     </task>
+-    <option name="localTasksCounter" value="2" />
++    <task id="LOCAL-00002" summary="Classe Tela&#10;Definindo o tamanho da tela">
++      <created>1681215176977</created>
++      <option name="number" value="00002" />
++      <option name="presentableId" value="LOCAL-00002" />
++      <option name="project" value="LOCAL" />
++      <updated>1681215176977</updated>
++    </task>
++    <task id="LOCAL-00003" summary="Classe Fase&#10;Recebe todas classes que interagem com o jogo">
++      <created>1681215255448</created>
++      <option name="number" value="00003" />
++      <option name="presentableId" value="LOCAL-00003" />
++      <option name="project" value="LOCAL" />
++      <updated>1681215255448</updated>
++    </task>
++    <task id="LOCAL-00004" summary="Classe player&#10;aqui e definido o jogador">
++      <created>1681215288620</created>
++      <option name="number" value="00004" />
++      <option name="presentableId" value="LOCAL-00004" />
++      <option name="project" value="LOCAL" />
++      <updated>1681215288620</updated>
++    </task>
++    <option name="localTasksCounter" value="5" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -109,6 +129,10 @@
+   </component>
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="Criando Primeiro GAME em JAVA" />
+-    <option name="LAST_COMMIT_MESSAGE" value="Criando Primeiro GAME em JAVA" />
++    <MESSAGE value="Classe Tela&#10;Definindo o tamanho da tela" />
++    <MESSAGE value="Classe Fase&#10;Recebe todas classes que interagem com o jogo" />
++    <MESSAGE value="Classe player&#10;aqui e definido o jogador" />
++    <MESSAGE value="Classe Shoot&#10;aqui e definido o o tiro do jogador" />
++    <option name="LAST_COMMIT_MESSAGE" value="Classe Shoot&#10;aqui e definido o o tiro do jogador" />
+   </component>
+ </project>
+\ No newline at end of file

@@ -6,8 +6,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
+import java.awt.image.ImageObserver;
 import java.util.ArrayList;
 import java.util.List;
+
+
 
 
 public class Fase extends JPanel implements ActionListener {
@@ -16,6 +19,8 @@ public class Fase extends JPanel implements ActionListener {
     private Timer timer;
     private List<Enemy1> enemy1;
     private boolean inPlay;
+    private Image explosion;
+    private int explosionTime ;
 
     public Fase() {
 
@@ -31,6 +36,10 @@ public class Fase extends JPanel implements ActionListener {
         timer.start();
         initEnemy();
         inPlay = true;
+        ImageIcon explosionIcon = new ImageIcon("images/explosao.png");
+        explosion = explosionIcon.getImage();
+        explosionTime = 0;
+
     }
 
     public void initEnemy() {
@@ -45,6 +54,12 @@ public class Fase extends JPanel implements ActionListener {
 
     public void paint(Graphics g) {
         Graphics2D graphics = (Graphics2D) g;
+        try {
+            checkColision();
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
         if (inPlay == true) {
             graphics.drawImage(fundo, 0, 0, null);
             graphics.drawImage(player.getImagem(), player.getX(), player.getY(), this);
@@ -56,8 +71,8 @@ public class Fase extends JPanel implements ActionListener {
                 graphics.drawImage(m.getImagem(), m.getX(), m.getY(), this);
             }
 
-            for (int i = 0; i < shoot.size(); i++) {
-                Shoot m = shoot.get(i);
+            for (int index = 0; index < shoot.size(); index++) {
+                Shoot m = shoot.get(index);
                 m.load2();
                 graphics.drawImage(m.getImage(), m.getX(), m.getY(), this);
             }
@@ -70,10 +85,9 @@ public class Fase extends JPanel implements ActionListener {
         } else {
             ImageIcon gameOver = new ImageIcon("images/gameOver.png");
             graphics.drawImage(gameOver.getImage(), 0, 0, null);
-
         }
 
-        g.dispose();
+
     }
 
     @Override
@@ -99,9 +113,6 @@ public class Fase extends JPanel implements ActionListener {
 
         }
 
-        repaint();
-
-
         List<Shoot> shoot = player.getShoot();
         for (int i = 0; i < shoot.size(); i++) {
             Shoot m = shoot.get(i);
@@ -110,40 +121,68 @@ public class Fase extends JPanel implements ActionListener {
             } else
                 shoot.remove(i);
         }
-        checkColision();
+
         repaint();
+        try {
+            checkColision();
+        } catch (InterruptedException ex) {
+            throw new RuntimeException(ex);
+        }
     }
 
-
-    public void checkColision() {
+    public void checkColision() throws InterruptedException {
         Rectangle formNave = player.getBounds();
         Rectangle formEnemy1;
         Rectangle formShoot;
+        Rectangle formShoot2;
+
         for (int i = 0; i < enemy1.size(); i++) {
             Enemy1 tempEnemy1 = enemy1.get(i);
             formEnemy1 = tempEnemy1.getBounds();
+
             if (formNave.intersects(formEnemy1)) {
+                getGraphics().drawImage(explosion, formEnemy1.x,formEnemy1.y,null);
                 player.setVisivel(false);
                 tempEnemy1.setVisivil(false);
                 inPlay = false;
             }
         }
-        List<Shoot> shoots = player.getShoot();
+        List<Shoot> shoots = player.getShootList();
         for (int j = 0; j < shoots.size(); j++) {
             Shoot tempShoot = shoots.get(j);
-            formShoot =tempShoot.getBounds();
+            formShoot = tempShoot.getBounds();
+
             for (int k = 0; k < enemy1.size(); k++) {
                 Enemy1 tempEnemy1 = enemy1.get(k);
                 formEnemy1 = tempEnemy1.getBounds();
+
                 if (formShoot.intersects(formEnemy1)){
+                    getGraphics().drawImage(explosion,formEnemy1.x,formEnemy1.y, null);
+                    Thread.sleep(10);
                     tempEnemy1.setVisivil(false);
                     tempShoot.setVisivil(false);
-
                 }
             }
 
         }
-    }
+
+        List<Shoot> shootList = player.getShoot();
+        for (int j = 0; j < shootList.size(); j++) {
+            Shoot tempShoot2 = shootList.get(j);
+            formShoot2 = tempShoot2.getBounds();
+
+            for (int k = 0; k < enemy1.size(); k++) {
+                Enemy1 tempEnemy1 = enemy1.get(k);
+                formEnemy1 = tempEnemy1.getBounds();
+
+                if (formShoot2.intersects(formEnemy1)){
+                    getGraphics().drawImage(explosion,formEnemy1.x,formEnemy1.y, null);
+                    Thread.sleep(10);
+
+                    tempEnemy1.setVisivil(false);
+                    tempShoot2.setVisivil(false);
+                }
+    }}}
 
     private class TecladoAdapter extends KeyAdapter {
 

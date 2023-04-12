@@ -4,14 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd221c4e-0be1-4c18-aeee-e4e7ef8d48ae" name="Changes" comment="Criando Primeiro GAME em JAVA">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Container/Tela.java" afterDir="false" />
+    <list default="true" id="dd221c4e-0be1-4c18-aeee-e4e7ef8d48ae" name="Changes" comment="Add, enemys, e colisões">
       <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/Fase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/Player.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/Shoot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/Enemy2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Fase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Fase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,24 +33,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "E:/projetos/PrimeiroGame/images",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.21034482",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/projetos/PrimeiroGame/images&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.21034482&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Model" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Tela" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Container.Tela" />
@@ -81,7 +85,12 @@
       <option name="presentableId" value="Default" />
       <updated>1681164285213</updated>
       <workItem from="1681164286240" duration="9378000" />
-      <workItem from="1681212475278" duration="2591000" />
+      <workItem from="1681212475278" duration="5230000" />
+      <workItem from="1681240368265" duration="143000" />
+      <workItem from="1681240699094" duration="627000" />
+      <workItem from="1681266665250" duration="3644000" />
+      <workItem from="1681299502337" duration="2000" />
+      <workItem from="1681324446091" duration="5493000" />
     </task>
     <task id="LOCAL-00001" summary="Criando Primeiro GAME em JAVA">
       <created>1681215005254</created>
@@ -90,7 +99,49 @@
       <option name="project" value="LOCAL" />
       <updated>1681215005254</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Classe Tela&#10;Definindo o tamanho da tela">
+      <created>1681215176977</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1681215176977</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Classe Fase&#10;Recebe todas classes que interagem com o jogo">
+      <created>1681215255448</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1681215255448</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Classe player&#10;aqui e definido o jogador">
+      <created>1681215288620</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1681215288620</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Classe de tiro">
+      <created>1681240721015</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1681240721015</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Classe Enemy1">
+      <created>1681270217016</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1681270217016</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Add, enemys, e colisões">
+      <created>1681270279992</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1681270279992</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -109,6 +160,13 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Criando Primeiro GAME em JAVA" />
-    <option name="LAST_COMMIT_MESSAGE" value="Criando Primeiro GAME em JAVA" />
+    <MESSAGE value="Classe Tela&#10;Definindo o tamanho da tela" />
+    <MESSAGE value="Classe Fase&#10;Recebe todas classes que interagem com o jogo" />
+    <MESSAGE value="Classe player&#10;aqui e definido o jogador" />
+    <MESSAGE value="Classe Shoot&#10;aqui e definido o o tiro do jogador" />
+    <MESSAGE value="Classe de tiro" />
+    <MESSAGE value="Classe Enemy1" />
+    <MESSAGE value="Add, enemys, e colisões" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add, enemys, e colisões" />
   </component>
 </project>
