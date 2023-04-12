@@ -3,6 +3,7 @@ package Model;
 import javax.swing.*;
 import java.awt.*;
 
+
 public class Shoot {
     private Image imagem;
     private Image image;
@@ -37,7 +38,13 @@ public class Shoot {
         if(this.x > LARGURA){
             isVisivil = false;
         }
+
     }
+    public Rectangle getBounds(){
+        return new Rectangle(x,y,largura,altura);
+    }
+
+
 
     public int getX() {
         return x;
@@ -65,5 +72,9 @@ public class Shoot {
 
     public Image getImage() {
         return image;
+    }
+
+    public void setVisivil(boolean visivil) {
+        isVisivil = visivil;
     }
 }

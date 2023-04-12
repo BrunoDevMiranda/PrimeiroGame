@@ -13,11 +13,13 @@ public class Player {
     private int height, width;
     private List<Shoot> shootList;
     private List<Shoot> shoot;
+    private boolean isVisivel;
 
 
     public Player() {
         this.x = 100;
         this.y = 100;
+        isVisivel = true;
         shootList = new ArrayList<>();
         shoot = new ArrayList<>();
     }
@@ -58,6 +60,11 @@ public class Player {
         this.shoot.add(new Shoot(x + width, y + (height / 3)));
 
     }
+
+    public Rectangle getBounds(){
+        return new Rectangle(x,y,width,height);
+    }
+
 
 
     public void keyPressed(KeyEvent tecla) {
@@ -133,5 +140,13 @@ public class Player {
 
     public int getWidth() {
         return width;
+    }
+
+    public boolean isVisivel() {
+        return isVisivel;
+    }
+
+    public void setVisivel(boolean visivel) {
+        isVisivel = visivel;
     }
 }
