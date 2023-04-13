@@ -52,28 +52,33 @@ public class Player {
 
     }
 
+    Sound soundS1 = new Sound("sound/GUNSHOT.wav");
+    Sound soundS2 = new Sound("sound/SHOOTING.wav");
+
     public void simpleShot() {
         this.shootList.add(new Shoot(x + width, y + (height / 2)));
+        soundS1.play();
     }
 
     public void dobleShot() {
         this.shoot.add(new Shoot(x + width, y + (height / 3)));
-
+        soundS2.play();
     }
 
-    public Rectangle getBounds(){
-        return new Rectangle(x,y,width,height);
+    public Rectangle getBounds() {
+        return new Rectangle(x, y, width, height);
     }
-
 
 
     public void keyPressed(KeyEvent tecla) {
         int codigo = tecla.getKeyCode();
         if (codigo == KeyEvent.VK_SPACE) {
             simpleShot();
+
         }
         if (codigo == KeyEvent.VK_B) {
             dobleShot();
+
         }
 
 

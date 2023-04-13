@@ -7,43 +7,49 @@ import java.awt.*;
 public class Shoot {
     private Image imagem;
     private Image image;
-    private int x,y;
+    private int x, y;
     private int largura, altura;
     private boolean isVisivil;
-    private  static final int LARGURA = 938;
+    private static final int LARGURA = 938;
 
-    private  static int VELOCIDADE = 3;
+    private static int VELOCIDADE = 3;
+    Sound soundS1 = new Sound("sound/GUNSHOT.wav");
+    Sound soundS2 = new Sound("sound/SHOOTING.wav");
 
-    public Shoot(int x, int y){
+    public Shoot(int x, int y) {
         this.x = x;
         this.y = y;
         isVisivil = true;
+
     }
-    public void load(){
+
+    public void load() {
         ImageIcon ref = new ImageIcon("images/simples.png");
+
         imagem = ref.getImage();
         this.largura = imagem.getWidth(null);
         this.altura = imagem.getHeight(null);
     }
 
-    public void load2(){
+    public void load2() {
         ImageIcon ref = new ImageIcon("images/duplo.png");
+
         image = ref.getImage();
         this.largura = image.getWidth(null);
         this.altura = image.getHeight(null);
     }
 
-    public void update(){
+    public void update() {
         this.x += VELOCIDADE;
-        if(this.x > LARGURA){
+        if (this.x > LARGURA) {
             isVisivil = false;
         }
 
     }
-    public Rectangle getBounds(){
-        return new Rectangle(x,y,largura,altura);
-    }
 
+    public Rectangle getBounds() {
+        return new Rectangle(x, y, largura, altura);
+    }
 
 
     public int getX() {

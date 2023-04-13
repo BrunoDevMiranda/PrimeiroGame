@@ -6,11 +6,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
-import java.awt.image.ImageObserver;
 import java.util.ArrayList;
 import java.util.List;
-
-
 
 
 public class Fase extends JPanel implements ActionListener {
@@ -20,13 +17,15 @@ public class Fase extends JPanel implements ActionListener {
     private List<Enemy1> enemy1;
     private boolean inPlay;
     private Image explosion;
-    private int explosionTime ;
+    private int score;
+
 
     public Fase() {
 
         setFocusable(true);
         setDoubleBuffered(true);
-
+        Sound soundAmbiente = new Sound("sound/ambiente.wav");
+        soundAmbiente.play();
         ImageIcon ref = new ImageIcon("images/estrelado.png");
         fundo = ref.getImage();
         player = new Player();
@@ -38,12 +37,12 @@ public class Fase extends JPanel implements ActionListener {
         inPlay = true;
         ImageIcon explosionIcon = new ImageIcon("images/explosao.png");
         explosion = explosionIcon.getImage();
-        explosionTime = 0;
+
 
     }
 
     public void initEnemy() {
-        int condernadas[] = new int[40];
+        int condernadas[] = new int[100];
         enemy1 = new ArrayList<Enemy1>();
         for (int i = 0; i < condernadas.length; i++) {
             int x = (int) (Math.random() * 8000 + 1024);
@@ -130,24 +129,28 @@ public class Fase extends JPanel implements ActionListener {
         }
     }
 
+
     public void checkColision() throws InterruptedException {
         Rectangle formNave = player.getBounds();
         Rectangle formEnemy1;
         Rectangle formShoot;
         Rectangle formShoot2;
+        Sound soundExplosion = new Sound("sound/EXPLOSIO.wav");
 
         for (int i = 0; i < enemy1.size(); i++) {
             Enemy1 tempEnemy1 = enemy1.get(i);
             formEnemy1 = tempEnemy1.getBounds();
 
             if (formNave.intersects(formEnemy1)) {
-                getGraphics().drawImage(explosion, formEnemy1.x,formEnemy1.y,null);
+                soundExplosion.play();
+                getGraphics().drawImage(explosion, formEnemy1.x, formEnemy1.y, null);
                 player.setVisivel(false);
                 tempEnemy1.setVisivil(false);
                 inPlay = false;
             }
         }
         List<Shoot> shoots = player.getShootList();
+
         for (int j = 0; j < shoots.size(); j++) {
             Shoot tempShoot = shoots.get(j);
             formShoot = tempShoot.getBounds();
@@ -156,8 +159,9 @@ public class Fase extends JPanel implements ActionListener {
                 Enemy1 tempEnemy1 = enemy1.get(k);
                 formEnemy1 = tempEnemy1.getBounds();
 
-                if (formShoot.intersects(formEnemy1)){
-                    getGraphics().drawImage(explosion,formEnemy1.x,formEnemy1.y, null);
+                if (formShoot.intersects(formEnemy1)) {
+                    soundExplosion.play();
+                    getGraphics().drawImage(explosion, formEnemy1.x, formEnemy1.y, null);
                     Thread.sleep(10);
                     tempEnemy1.setVisivil(false);
                     tempShoot.setVisivil(false);
@@ -165,6 +169,7 @@ public class Fase extends JPanel implements ActionListener {
             }
 
         }
+
 
         List<Shoot> shootList = player.getShoot();
         for (int j = 0; j < shootList.size(); j++) {
@@ -174,15 +179,17 @@ public class Fase extends JPanel implements ActionListener {
             for (int k = 0; k < enemy1.size(); k++) {
                 Enemy1 tempEnemy1 = enemy1.get(k);
                 formEnemy1 = tempEnemy1.getBounds();
-
-                if (formShoot2.intersects(formEnemy1)){
-                    getGraphics().drawImage(explosion,formEnemy1.x,formEnemy1.y, null);
+                if (formShoot2.intersects(formEnemy1)) {
+                    soundExplosion.play();
+                    getGraphics().drawImage(explosion, formEnemy1.x, formEnemy1.y, null);
                     Thread.sleep(10);
 
                     tempEnemy1.setVisivil(false);
                     tempShoot2.setVisivil(false);
                 }
-    }}}
+            }
+        }
+    }
 
     private class TecladoAdapter extends KeyAdapter {
 
