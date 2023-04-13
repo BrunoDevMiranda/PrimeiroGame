@@ -11,17 +11,14 @@ import java.util.List;
 
 
 public class Fase extends JPanel implements ActionListener {
-    private Image fundo;
-    private Player player;
-    private Timer timer;
+    private final Image fundo;
+    private final Player player;
     private List<Enemy1> enemy1;
     private boolean inPlay;
-    private Image explosion;
+    private final Image explosion;
     private int score;
 
-
     public Fase() {
-
         setFocusable(true);
         setDoubleBuffered(true);
         Sound soundAmbiente = new Sound("sound/ambiente.wav");
@@ -31,16 +28,14 @@ public class Fase extends JPanel implements ActionListener {
         player = new Player();
         player.load();
         addKeyListener(new TecladoAdapter());
-        timer = new Timer(1, this);
+        Timer timer = new Timer(1, this);
         timer.start();
         initEnemy();
         inPlay = true;
         ImageIcon explosionIcon = new ImageIcon("images/explosao.png");
         explosion = explosionIcon.getImage();
-
-
+        score = 0;
     }
-
     public void initEnemy() {
         int condernadas[] = new int[100];
         enemy1 = new ArrayList<Enemy1>();
@@ -50,7 +45,6 @@ public class Fase extends JPanel implements ActionListener {
             enemy1.add(new Enemy1(x, y));
         }
     }
-
     public void paint(Graphics g) {
         Graphics2D graphics = (Graphics2D) g;
         try {
@@ -59,8 +53,13 @@ public class Fase extends JPanel implements ActionListener {
             throw new RuntimeException(e);
         }
 
+
+
         if (inPlay == true) {
             graphics.drawImage(fundo, 0, 0, null);
+            graphics.setColor(Color.WHITE);
+            graphics.setFont(new Font("Arial", Font.PLAIN,24));
+            graphics.drawString("Score: "+ score,10,30);
             graphics.drawImage(player.getImagem(), player.getX(), player.getY(), this);
             List<Shoot> shootList = player.getShootList();
             List<Shoot> shoot = player.getShoot();
@@ -86,9 +85,7 @@ public class Fase extends JPanel implements ActionListener {
             graphics.drawImage(gameOver.getImage(), 0, 0, null);
         }
 
-
     }
-
     @Override
     public void actionPerformed(ActionEvent e) {
         player.update();
@@ -129,7 +126,6 @@ public class Fase extends JPanel implements ActionListener {
         }
     }
 
-
     public void checkColision() throws InterruptedException {
         Rectangle formNave = player.getBounds();
         Rectangle formEnemy1;
@@ -150,7 +146,6 @@ public class Fase extends JPanel implements ActionListener {
             }
         }
         List<Shoot> shoots = player.getShootList();
-
         for (int j = 0; j < shoots.size(); j++) {
             Shoot tempShoot = shoots.get(j);
             formShoot = tempShoot.getBounds();
@@ -160,6 +155,7 @@ public class Fase extends JPanel implements ActionListener {
                 formEnemy1 = tempEnemy1.getBounds();
 
                 if (formShoot.intersects(formEnemy1)) {
+                    score += 100;
                     soundExplosion.play();
                     getGraphics().drawImage(explosion, formEnemy1.x, formEnemy1.y, null);
                     Thread.sleep(10);
@@ -170,7 +166,6 @@ public class Fase extends JPanel implements ActionListener {
 
         }
 
-
         List<Shoot> shootList = player.getShoot();
         for (int j = 0; j < shootList.size(); j++) {
             Shoot tempShoot2 = shootList.get(j);
@@ -180,6 +175,7 @@ public class Fase extends JPanel implements ActionListener {
                 Enemy1 tempEnemy1 = enemy1.get(k);
                 formEnemy1 = tempEnemy1.getBounds();
                 if (formShoot2.intersects(formEnemy1)) {
+                    score += 100;
                     soundExplosion.play();
                     getGraphics().drawImage(explosion, formEnemy1.x, formEnemy1.y, null);
                     Thread.sleep(10);
@@ -192,19 +188,14 @@ public class Fase extends JPanel implements ActionListener {
     }
 
     private class TecladoAdapter extends KeyAdapter {
-
-
+        @Override
         public void keyPressed(KeyEvent evente) {
             player.keyPressed(evente);
         }
 
-
+        @Override
         public void keyReleased(KeyEvent e) {
             player.keyRelease(e);
         }
-
-
     }
-
-
 }
